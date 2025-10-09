@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Acompanhe as últimas notícias, eventos e atualizações do Círculo das Artes. Fique por dentro de tudo que fazemos!">
+    <meta name="keywords" content="Notícias, Blog, Círculo das Artes, Eventos Culturais, Atualizações ONG">
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Blog e Notícias | Círculo das Artes</title>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html" aria-label="Voltar para a página inicial do Círculo das Artes">
+                <img src="imagens/logo-circulo-artes.png" alt="Logotipo Círculo das Artes" width="150">
+            </a>
+        </div>
+        <nav aria-label="Menu principal">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="projetos.html">Nossos Projetos</a></li>
+                <li><a href="cadastro.html">Cadastre-se / Voluntariado</a></li>
+                <li><a href="index.html#contato">Contato</a></li>
+                <li><a href="blog.html" aria-current="page">Blog e Notícias</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Notícias e Atualizações do Círculo das Artes</h1>
+
+        <section id="lista-posts">
+            <h2>Últimas Publicações</h2>
+            
+            <article class="post" aria-labelledby="titulo-post-1">
+                <img src="imagens/noticia-apresentacao.jpg" alt="Foto de uma apresentação da orquestra jovem da ONG" width="500" loading="lazy">
+                
+                <h3 id="titulo-post-1">Sucesso na Apresentação da orquestra jovem</h3>
+                <p class="meta-data">Publicado em: <time datetime="2025-10-09">09 de Outubro de 2025</time> por Equipe de Comunicação</p>
+                <p>Nossos alunos brilharam com o espetáculo Musical da orquestra jovem. O evento arrecadou fundos para a compra de novos instrumentos...</p>
+                <a href="post-1.html" aria-label="Leia mais sobre o Sucesso na Apresentação Anual da orquestra jovem">Leia Mais</a>
+            </article>
+            
+            <article class="post" aria-labelledby="titulo-post-2">
+                <img src="imagens/noticia-oficina-nova.jpg" alt="Foto de crianças participando de uma oficina de artes" width="500" loading="lazy">
+                
+                <h3 id="titulo-post-2">Inscrições Abertas para a Oficina de Pintura em tela</h3>
+                <p class="meta-data">Publicado em: <time datetime="2025-09-20">20 de Setembro de 2025</time> por Gestão de Projetos</p>
+                <p>Uma nova oportunidade para a comunidade aprender Pintura em tela. As vagas são limitadas...</p>
+                <a href="post-2.html" aria-label="Leia mais sobre as Inscrições Abertas para a Oficina de Pintura em tela">Leia Mais</a>
+            </article>
+        </section>
+
+        <aside id="imprensa-newsletter">
+            <h2>Mantenha-se Informado</h2>
+            
+            <section class="newsletter">
+                <h3>Assine Nossa Newsletter</h3>
+                <form action="/inscrever-newsletter" method="POST">
+                    <label for="newsletter-email">Seu melhor e-mail:</label>
+                    <input type="email" id="newsletter-email" name="email" required>
+                    <button type="submit">Inscrever</button>
+                </form>
+            </section>
+            
+            <section class="imprensa">
+                <h3>Área de Imprensa</h3>
+                <p>Acesse releases, fotos em alta resolução e kits de mídia para jornalistas.</p>
+                <a href="documentos/kit-imprensa.zip" target="_blank" aria-label="Acessar o Kit de Imprensa (arquivo zip)">Acessar Kit de Mídia</a>
+            </section>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Círculo das Artes. Conteúdo e Comunicação.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

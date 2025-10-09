@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulário de cadastro para voluntários e apoiadores do Círculo das Artes. Preencha seus dados para começar.">
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Cadastro e Inscrição | Círculo das Artes</title>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html" aria-label="Voltar para a página inicial do Círculo das Artes">
+                <img src="imagens/logo-circulo-artes.png" alt="Logotipo Círculo das Artes" width="150">
+            </a>
+        </div>
+        <nav aria-label="Menu principal">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="projetos.html">Nossos Projetos</a></li>
+                <li><a href="cadastro.html" aria-current="page">Cadastre-se / Voluntariado</a></li>
+                <li><a href="index.html#contato">Contato</a></li>
+                <li><a href="blog.html">Blog e Notícias</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Formulário de Inscrição para Voluntários e Apoiadores</h1>
+
+        <p>Preencha os campos abaixo para se juntar ao Círculo das Artes. Os campos marcados com * são obrigatórios.</p>
+
+        <img src="imagens/jovem-pintando.jpg" alt="Jovem em aula de artes visuais" width="500" loading="lazy">
+
+        <form action="/processar-cadastro" method="POST">
+            
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+
+                <label for="nome-completo">Nome Completo *</label>
+                <input type="text" id="nome-completo" name="nome-completo" required aria-required="true">
+
+                <label for="data-nascimento">Data de Nascimento *</label>
+                <input type="date" id="data-nascimento" name="data-nascimento" required aria-required="true">
+
+                <label for="cpf">CPF *</label>
+                <input type="text" id="cpf" name="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00" required aria-required="true" title="Formato esperado: 000.000.000-00">
+            </fieldset>
+
+            <fieldset>
+                <legend>Dados de Contato</legend>
+                
+                <label for="email">E-mail *</label>
+                <input type="email" id="email" name="email" required aria-required="true">
+
+                <label for="telefone">Telefone *</label>
+                <input type="tel" id="telefone" name="telefone" pattern="\(\d{2}\) \d{4,5}-\d{4}" placeholder="(00) 00000-0000" required aria-required="true" title="Formato esperado: (00) 00000-0000">
+            </fieldset>
+
+            <fieldset>
+                <legend>Endereço</legend>
+                
+                <label for="cep">CEP *</label>
+                <input type="text" id="cep" name="cep" pattern="\d{5}-\d{3}" placeholder="00000-000" required aria-required="true" title="Formato esperado: 00000-000">
+                
+                <label for="endereco">Endereço (Rua, Número) *</label>
+                <input type="text" id="endereco" name="endereco" required aria-required="true">
+
+                <label for="cidade">Cidade *</label>
+                <input type="text" id="cidade" name="cidade" required aria-required="true">
+
+                <label for="estado">Estado *</label>
+                <input type="text" id="estado" name="estado" required aria-required="true">
+            </fieldset>
+
+            <button type="submit">Finalizar Inscrição</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Círculo das Artes. Junte-se à nossa missão.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
