@@ -1,0 +1,68 @@
+/* ========================================= */
+/* LAYOUT: CABEÇALHO (HEADER) E NAVEGAÇÃO PRINCIPAL */
+
+
+header {
+    /* Cor de fundo: Azul Marinho (Cor Primária) */
+    background-color: var(--cor-primaria);
+    /* Garante que o header seja flexível para mobile */
+    padding: var(--espacamento-s) 0; /* 16px de padding vertical */
+    /* Z-index alto para ficar acima do conteúdo, se necessário */
+    z-index: 900; 
+}
+
+/* Container para alinhar logo e navegação */
+/* A classe .container está definida em _grid.css. 
+   Usamos o Flexbox aqui para alinhamento horizontal. */
+header .container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    /* Adicionamos o padding lateral aqui para garantir o espaçamento correto
+       se o header .container for usado em diferentes contextos. */
+    padding: 0 var(--espacamento-s);
+}
+
+/* Estilização do Logo */
+.logo img {
+    max-width: 120px; 
+    height: auto;
+}
+
+/* ------------------------------------- */
+/* NAVEGAÇÃO (NAVEGAÇÃO PRINCIPAL - DESKTOP FIRST) */
+/* ------------------------------------- */
+
+nav ul {
+    /* Usa o módulo de Flexbox para organizar os links */
+    display: flex; 
+    gap: var(--espacamento-m); /* 24px de espaçamento entre os itens */
+}
+
+nav ul li a {
+    /* Estilo do Link */
+    color: var(--cor-neutra-clara); 
+    font-family: var(--fonte-corpo);
+    font-weight: 700;
+    padding: var(--espacamento-xs) var(--espacamento-s);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Estado Interativo (Hover/Focus) */
+nav ul li a:hover,
+nav ul li a:focus {
+    color: var(--cor-primaria); 
+    background-color: var(--cor-secundaria); 
+    border-radius: var(--borda-arredondada);
+}
+
+/* ------------------------------------- */
+/* CONFIGURAÇÃO INICIAL MOBILE-FIRST */
+/* Oculta os links em telas pequenas, deixando apenas o logo e o menu hambúrguer visíveis */
+/* ------------------------------------- */
+@media (max-width: 767px) {
+    /* Em Mobile, o menu principal de links deve ser oculto. */
+    nav {
+        display: none; 
+    }
+}

@@ -1,0 +1,72 @@
+/* ========================================= */
+/* COMPONENTES: BOTÕES (BUTTONS) */
+/* Requisito: Criar botões com estados visuais (hover, focus, active, disabled) */
+/* ========================================= */
+
+.btn {
+    /* Base: Visual elegante e limpo */
+    display: inline-block;
+    padding: var(--espacamento-xs) var(--espacamento-m);
+    border: none;
+    border-radius: var(--borda-arredondada);
+    cursor: pointer;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ------------------------------------- */
+/* 1. BOTÃO PRIMÁRIO (Azul Marinho) */
+/* Usado para Ações Principais (Ex: Finalizar Inscrição, Candidatar-se) */
+/* ------------------------------------- */
+.btn-primario {
+    background-color: var(--cor-primaria);
+    color: var(--cor-neutra-clara); 
+    box-shadow: var(--sombra-padrao);
+}
+
+/* Estado INTERATIVO: HOVER/FOCUS (Toque de Ouro Suave) */
+.btn-primario:hover,
+.btn-primario:focus {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+    outline: none; 
+}
+
+/* Estado ATIVO: Clicado */
+.btn-primario:active {
+    background-color: #E6A200;
+    transform: translateY(1px); 
+    box-shadow: none; 
+}
+
+/* ------------------------------------- */
+/* 2. BOTÃO SECUNDÁRIO/OUTLINE (Transparência) */
+/* Usado para Ações Secundárias (Ex: Voltar, Ver Detalhes) */
+/* ------------------------------------- */
+.btn-secundario {
+    background-color: transparent;
+    border: 2px solid var(--cor-primaria); /* Borda Azul Marinho */
+    color: var(--cor-primaria); /* Texto Azul Marinho */
+}
+
+/* Estado INTERATIVO: HOVER/FOCUS (Inversão de Cores) */
+.btn-secundario:hover,
+.btn-secundario:focus {
+    background-color: var(--cor-primaria); /* Fundo Azul Marinho */
+    color: var(--cor-neutra-clara); /* Texto Off-White */
+}
+
+/* ------------------------------------- */
+/* 3. ESTADO DESABILITADO (Obrigatório) */
+/* ------------------------------------- */
+.btn:disabled,
+.btn[disabled] {
+    background-color: #BDBDBD;
+    color: #616161; 
+    cursor: not-allowed;
+    opacity: 0.6;
+    box-shadow: none;
+}

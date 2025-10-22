@@ -1,0 +1,66 @@
+/* ========================================= */
+/* LAYOUT: GRID PRINCIPAL E SISTEMA DE 12 COLUNAS */
+/* Requisito: CSS Grid para estrutura e Grid 12 Colunas */
+/* ========================================= */
+
+/* 1. Container: Garante que o conteúdo tenha uma largura máxima e centralização */
+.container {
+    /* Largura Máxima padrão para Desktop */
+    max-width: 1200px; 
+    /* Centraliza o container na tela */
+    margin-left: auto;
+    margin-right: auto;
+    /* Adiciona padding horizontal (respeitando o Espaçamento Modular) */
+    padding-left: var(--espacamento-s); /* 16px */
+    padding-right: var(--espacamento-s); /* 16px */
+}
+
+/* 2. Grid de 12 Colunas - Aplicado onde precisamos de flexibilidade */
+/* Ex: Dentro do .container, para estruturar cards ou formulários */
+.grid {
+    display: grid;
+    /* Define o grid para ter 12 colunas de largura igual */
+    grid-template-columns: repeat(12, 1fr);
+    /* Espaçamento entre as colunas (Gutter) */
+    gap: var(--espacamento-m); /* 24px */
+}
+
+/* 3. Classes de Coluna (col-X) - Responsividade Mobile-First (Mobile -> 12 colunas por padrão) */
+
+.col-span-1 { grid-column: span 1; }
+.col-span-2 { grid-column: span 2; }
+.col-span-3 { grid-column: span 3; }
+.col-span-4 { grid-column: span 4; } /* Terço da tela */
+.col-span-5 { grid-column: span 5; }
+.col-span-6 { grid-column: span 6; } /* Metade da tela */
+.col-span-7 { grid-column: span 7; }
+.col-span-8 { grid-column: span 8; }
+.col-span-9 { grid-column: span 9; }
+.col-span-10 { grid-column: span 10; }
+.col-span-11 { grid-column: span 11; }
+.col-span-12 { grid-column: span 12; } /* Largura total (padrão em mobile) */
+
+/* 4. Layout Principal (Body) com CSS Grid */
+.layout-principal {
+    display: grid;
+    /* Define as linhas: Cabeçalho fixo, Conteúdo que cresce, Rodapé fixo */
+    grid-template-rows: auto 1fr auto; 
+    /* Garante que o grid ocupe toda a altura da viewport */
+    min-height: 100vh;
+}
+
+/* 5. Estilização das Áreas Principais */
+header {
+    /* Mapeamento para o grid principal */
+    grid-row: 1; 
+}
+
+main {
+    /* Mapeamento para o grid principal */
+    grid-row: 2; 
+}
+
+footer {
+    /* Mapeamento para o grid principal */
+    grid-row: 3;
+}

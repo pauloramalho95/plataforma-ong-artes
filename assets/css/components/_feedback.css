@@ -1,0 +1,76 @@
+/* ========================================= */
+/* COMPONENTES: FEEDBACK (ALERTS, TOASTS, MODALS) */
+/* Requisito: Desenvolver componentes de feedback */
+/* ========================================= */
+
+/* 1. Base do Componente Alert */
+.alert {
+    /* Visual elegante e discreto */
+    padding: var(--espacamento-m); 
+    margin: var(--espacamento-m) 0;
+    border-radius: var(--borda-arredondada);
+    font-weight: 700;
+    line-height: 1.4;
+    border-left: 5px solid; /* Borda lateral para destaque */
+}
+
+/* 2. Tipos de Alerta (Usando Cores do Design System) */
+
+/* Alerta de SUCESSO (Verde) */
+.alert-success {
+    background-color: #E8F5E9; 
+    color: #1B5E20; 
+    border-color: var(--cor-sucesso); 
+}
+/* Exemplo: "Doação realizada com sucesso!" */
+
+/* Alerta de ERRO (Vermelho) */
+.alert-error {
+    background-color: #FFEBEE; 
+    color: #B71C1C; 
+    border-color: var(--cor-erro);
+}
+/* Exemplo: "Houve um erro no processamento do cadastro." */
+
+/* Alerta de INFORMAÇÃO (Azul Primário) */
+.alert-info {
+    background-color: #E3F2FD; /* Fundo azul muito claro */
+    color: var(--cor-primaria); /* Texto Azul Marinho */
+    border-color: var(--cor-primaria); /* Borda lateral Azul Marinho */
+}
+/* Exemplo: "Seu cadastro está pendente de aprovação de voluntariado." */
+
+/* ------------------------------------- */
+/* 3. ESTRUTURA BÁSICA DE MODAL (Requisito) */
+/* ------------------------------------- */
+
+/* Fundo escuro (Overlay) */
+.modal-overlay {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000; /* Garante que fique acima de tudo */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Conteúdo do Modal */
+.modal-content {
+    background-color: var(--cor-fundo-card);
+    padding: var(--espacamento-l);
+    border-radius: var(--borda-arredondada);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    max-width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    text-align: center;
+}
+
+/* Classe para mostrar o modal via JS */
+.modal-overlay.is-open {
+    display: flex;
+}

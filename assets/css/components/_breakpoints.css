@@ -1,0 +1,115 @@
+/* ========================================= */
+/* LAYOUT: BREAKPOINTS RESPONSIVOS */
+/* Requisito: Criar no mínimo 5 breakpoints responsivos bem definidos */
+/* Abordagem: Mobile-First (min-width) */
+/* ========================================= */
+
+/* Definição dos Breakpoints */
+/* Usaremos 5 breakpoints comuns para diferentes dispositivos: */
+
+/* ------------------------------------- */
+/* 1. MÓVEL GRANDE (Ex: 480px) */
+/* Para celulares com telas um pouco maiores. */
+/* ------------------------------------- */
+@media (min-width: 480px) {
+    /* Ajustes leves de padding ou tamanho de fonte */
+    :root {
+        --tamanho-h1: 2.2rem;
+    }
+}
+
+/* ------------------------------------- */
+/* 2. TABLET VERTICAL (Ex: 768px) */
+/* Típico para tablets em modo retrato. */
+/* ------------------------------------- */
+@media (min-width: 768px) {
+    
+    /* Mostrar a navegação de Desktop */
+    nav {
+        display: block !important; /* Sobrescreve o display: none do mobile */
+    }
+    .menu-toggle {
+        display: none !important; /* Esconde o ícone hambúrguer */
+    }
+
+    /* Ajuste na Tipografia */
+    :root {
+        --tamanho-h1: 2.5rem;
+        --tamanho-h2: 1.8rem;
+    }
+    
+    /* Layout de 2 Colunas (Ex: Cards e Galeria) */
+    .cards-container {
+        /* Transiciona para Grid de duas colunas */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--espacamento-l);
+    }
+    
+    /* Layout para o Formulário de Cadastro (para usar o espaço lateral) */
+    form {
+        max-width: 700px;
+        /* Centraliza o formulário */
+        margin: var(--espacamento-xl) auto; 
+    }
+}
+
+/* ------------------------------------- */
+/* 3. TABLET HORIZONTAL / DESKTOP PEQUENO (Ex: 992px) */
+/* Típico para Laptops menores. */
+/* ------------------------------------- */
+@media (min-width: 992px) {
+    /* Ajuste na Tipografia */
+    :root {
+        --tamanho-h1: 3.0rem;
+    }
+
+    /* Layout de 3 Colunas para Cards */
+    .cards-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    /* Grid Customizado de 12 Colunas (Ativação das classes col-span-X) */
+    /* Exemplo: Usado para dividir a seção de contato em duas colunas */
+    .col-span-md-6 { 
+        grid-column: span 6; /* Ocupa 6 de 12 colunas (Metade) */
+    }
+    .col-span-md-4 {
+        grid-column: span 4; /* Ocupa 4 de 12 colunas (Um terço) */
+    }
+}
+
+/* ------------------------------------- */
+/* 4. DESKTOP PADRÃO (Ex: 1200px) */
+/* Largura padrão para monitores de mesa. */
+/* ------------------------------------- */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1400px; /* Expande o container para monitores grandes */
+    }
+    
+    /* Layout de 4 Colunas para Cards */
+    .cards-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    /* Ativação das classes de coluna para Desktop */
+    .col-span-lg-3 { 
+        grid-column: span 3; /* Ocupa 3 de 12 colunas (Um quarto) */
+    }
+}
+
+/* ------------------------------------- */
+/* 5. DESKTOP GRANDE (Ex: 1440px) */
+/* Telas 4k ou monitores ultrawide. */
+/* ------------------------------------- */
+@media (min-width: 1440px) {
+    /* Ajustes finais de tamanho */
+    :root {
+        --tamanho-body: 1.1rem; /* Aumenta um pouco o texto do corpo para telas muito grandes */
+    }
+}
+
+/* ------------------------------------- */
+/* FIM DOS BREAKPOINTS */
+/* ------------------------------------- */

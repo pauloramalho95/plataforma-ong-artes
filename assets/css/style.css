@@ -1,0 +1,23 @@
+/* ================================================= */
+/* ESTILO.CSS - PONTO DE ENTRADA DO CSS MODULAR      */
+/* ================================================= */
+
+/* 1. MÓDULOS DE BASE: Variáveis, Reset e Tipografia */
+@import 'base/_variaveis.css';
+@import 'base/_reset.css';
+@import 'base/_tipografia.css';
+
+/* 2. MÓDULOS DE LAYOUT: Estrutura Geral e Responsividade */
+@import 'layout/_grid.css';
+@import 'layout/_header.css';
+@import 'layout/_footer.css';
+@import 'layout/_breakpoints.css'; 
+
+/* 3. MÓDULOS DE COMPONENTES: Elementos de Interface Reutilizáveis */
+@import 'components/_flexbox.css';
+@import 'components/_botoes.css';    
+@import 'components/_cards.css';     
+@import 'components/_navegacao.css'; 
+@import 'components/_formularios.css'; 
+@import 'components/_feedback.css';  
+@import 'components/_badges.css';

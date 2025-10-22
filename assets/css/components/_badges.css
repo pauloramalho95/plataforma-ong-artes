@@ -1,0 +1,45 @@
+/* ========================================= */
+/* COMPONENTES: BADGES E TAGS PARA CATEGORIZAÇÃO */
+/* Requisito: Criar sistema de badges e tags para categorização */
+/* ========================================= */
+
+/* 1. Base do Componente Badge/Tag */
+.badge {
+    /* Base visual limpa e pequena */
+    display: inline-block;
+    padding: var(--espacamento-xs) calc(var(--espacamento-xs) + 4px); /* Ex: 8px vertical, 12px horizontal */
+    border-radius: 50px;
+    font-size: var(--tamanho-small);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-right: var(--espacamento-xs);
+    margin-bottom: var(--espacamento-xs);
+    line-height: 1;
+}
+
+/* 2. Tipos de Badge (Baseados em Status ou Categoria) */
+
+/* Badge Primário (Foco Principal / Categoria Geral) */
+.badge-primario {
+    background-color: var(--cor-primaria);
+    color: var(--cor-neutra-clara);
+}
+
+/* Badge Secundário (Status Crítico / Necessidade de Ação) */
+.badge-secundario {
+    background-color: var(--cor-secundaria); 
+    color: var(--cor-primaria);
+    border: 1px solid var(--cor-primaria);
+}
+
+/* Badge Sucesso (Status: Concluído, Financiado) */
+.badge-sucesso {
+    background-color: var(--cor-sucesso);
+    color: var(--cor-fundo-card);
+}
+
+/* Badge Neutro (Status: Em Andamento, Pendente) */
+.badge-neutro {
+    background-color: #EEEEEE; 
+    color: var(--cor-neutra-escura);
+}

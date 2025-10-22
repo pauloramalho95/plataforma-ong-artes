@@ -1,0 +1,81 @@
+/* ========================================= */
+/* COMPONENTES: CLASSES UTILITY FLEXBOX */
+/* Requisito: Utilizar flexbox para componentes internos e alinhamentos */
+/* ========================================= */
+
+/* 1. Classe Base: Define o elemento como container flex */
+.d-flex {
+    display: flex;
+}
+
+/* 2. Direção do Eixo Principal (Main Axis) */
+.flex-row {
+    flex-direction: row; /* Padrão, mas explícito */
+}
+
+.flex-col {
+    flex-direction: column; /* Coloca os itens um abaixo do outro */
+}
+
+/* 3. Quebra de Linha (Wrap) */
+.flex-wrap {
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+}
+
+/* 4. Justify Content (Alinhamento no Eixo Principal) */
+/* Espaçamento entre os itens (ex: em navegações) */
+.justify-between {
+    justify-content: space-between;
+}
+
+/* Centraliza os itens horizontalmente */
+.justify-center {
+    justify-content: center;
+}
+
+/* Alinha os itens ao início (esquerda) */
+.justify-start {
+    justify-content: flex-start;
+}
+
+/* Alinha os itens ao fim (direita) */
+.justify-end {
+    justify-content: flex-end;
+}
+
+/* 5. Align Items (Alinhamento no Eixo Cruzado - Vertical) */
+/* Centraliza os itens verticalmente (ex: logo e menu) */
+.align-center {
+    align-items: center;
+}
+
+/* Alinha os itens ao topo */
+.align-start {
+    align-items: flex-start;
+}
+
+/* Alinha os itens na base */
+.align-end {
+    align-items: flex-end;
+}
+
+/* 6. Alinhamento de Item Individual (Self) */
+.align-self-center {
+    align-self: center;
+}
+
+/* Exemplo de uso: <div class="d-flex justify-between align-center">...</div> */
+
+/* 7. Gap (Espaçamento entre os itens) */
+/* Usa as variáveis de espaçamento do seu Design System */
+.gap-s {
+    gap: var(--espacamento-s); /* 16px */
+}
+
+.gap-m {
+    gap: var(--espacamento-m); /* 24px */
+}
+
+.gap-l {
+    gap: var(--espacamento-l); /* 32px */
+}

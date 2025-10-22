@@ -1,0 +1,57 @@
+/* ========================================= */
+/* BASE: TIPOGRAFIA E ESTILOS GLOBAIS DE TEXTO */
+/* Garante o uso das fontes e contraste WCAG */
+/* ========================================= */
+
+/* Estilos de Corpo de Texto */
+body {
+    font-family: var(--fonte-corpo);
+    font-size: var(--tamanho-body);
+    line-height: 1.6;
+    color: var(--cor-neutra-escura); /* Garante bom contraste com --cor-neutra-clara */
+    background-color: var(--cor-neutra-clara);
+}
+
+/* Estilos de Títulos (Hierarquia) */
+h1, h2, h3 {
+    font-family: var(--fonte-titulo);
+    color: var(--cor-primaria); /* Títulos em Azul Marinho (Clássico/Elegante) */
+    line-height: 1.2;
+    margin-bottom: var(--espacamento-s);
+    margin-top: var(--espacamento-m);
+}
+
+h1 {
+    font-size: var(--tamanho-h1);
+    /* Margem extra para h1 */
+    margin-top: var(--espacamento-l); 
+}
+
+h2 {
+    font-size: var(--tamanho-h2);
+    /* Linha de separação visual discreta, se desejar */
+    /* border-bottom: 2px solid var(--cor-neutra-escura); */
+    padding-bottom: var(--espacamento-xs);
+}
+
+h3 {
+    font-size: var(--tamanho-h3);
+}
+
+/* Estilos para textos menores (Rodapé, Metadados) */
+small, .meta-data {
+    font-size: var(--tamanho-small);
+    color: #616161; 
+}
+
+/* Estilos de Links */
+a {
+    color: var(--cor-primaria);
+    text-decoration: none; 
+    transition: color 0.3s ease;
+}
+
+a:hover, a:focus {
+    color: var(--cor-secundaria);
+    text-decoration: underline;
+}

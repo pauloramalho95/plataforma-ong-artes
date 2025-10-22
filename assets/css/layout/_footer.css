@@ -1,0 +1,49 @@
+/* ========================================= */
+/* LAYOUT: RODAPÉ (FOOTER) */
+/* Design Clássico/Elegante: Azul Marinho (Cor Primária) e Branco/Ouro */
+/* ========================================= */
+
+footer {
+    /* Cor de fundo igual ao header, para consistência elegante */
+    background-color: var(--cor-primaria);
+    color: var(--cor-neutra-clara);
+    
+    /* Espaçamento vertical grande para dar peso à seção */
+    padding: var(--espacamento-l) var(--espacamento-s); /* 32px top/bottom */
+    
+    /* Centraliza o texto (bom para mobile) */
+    text-align: center;
+    
+    /* Garante que o footer não encolha (para layouts de grid como definimos) */
+    flex-shrink: 0;
+}
+
+/* Estilização de parágrafos e informações menores no rodapé */
+footer p {
+    margin-bottom: var(--espacamento-xs); /* 8px */
+    font-size: var(--tamanho-small); /* Letras menores */
+    line-height: 1.4;
+}
+
+/* Links no rodapé (Termos de Uso, etc.) */
+footer a {
+    color: var(--cor-neutra-clara); /* Off-White */
+    text-decoration: underline;
+    transition: color 0.3s ease;
+    
+    /* Garante que o link de segurança seja ainda menor */
+    font-size: var(--tamanho-small); 
+}
+
+/* Hover e Focus: Toque de Ouro Suave para interação elegante */
+footer a:hover,
+footer a:focus {
+    color: var(--cor-secundaria); /* Ouro Suave */
+}
+
+/* Estilo para a tag <small> de segurança no rodapé */
+footer small {
+    display: block; /* Ocupa a linha inteira */
+    margin-top: var(--espacamento-s); /* 16px de espaço do conteúdo acima */
+    color: #bdbdbd; /* Cinza bem claro para ser discreto */
+}

@@ -1,0 +1,84 @@
+/* ========================================= */
+/* COMPONENTES: FORMULÁRIOS ESTILIZADOS */
+/* Requisito: Implementar formulários estilizados com validação visual */
+/* ========================================= */
+
+form {
+    /* O formulário ocupa a largura total no mobile (Mobile-First) */
+    width: 100%; 
+    max-width: 600px; /* Limita a largura em telas maiores para melhor leitura */
+    margin: var(--espacamento-l) auto; /* Centraliza o formulário */
+    padding: var(--espacamento-l);
+    background-color: var(--cor-fundo-card); 
+    border-radius: var(--borda-arredondada);
+    box-shadow: var(--sombra-padrao);
+}
+
+/* 1. Agrupamento Lógico (Fieldset e Legend) */
+fieldset {
+    border: 1px solid #D1C4E9; /* Borda suave e elegante (tom de lavanda/cinza) */
+    padding: var(--espacamento-m); /* 24px de padding interno */
+    margin-bottom: var(--espacamento-l); /* 32px de espaço entre grupos */
+    border-radius: var(--borda-arredondada);
+}
+
+legend {
+    /* Estilo do título do agrupamento (Dados Pessoais, Contato) */
+    font-family: var(--fonte-titulo);
+    font-size: var(--tamanho-h3);
+    color: var(--cor-primaria);
+    padding: 0 var(--espacamento-xs); /* 8px de padding para destacar a legenda da borda */
+}
+
+/* 2. Rótulos e Inputs (Label e Input) */
+label {
+    display: block; /* Ocupa a linha toda para separar do input */
+    margin-top: var(--espacamento-s); /* 16px */
+    margin-bottom: var(--espacamento-xs); /* 8px */
+    font-weight: 700;
+    color: var(--cor-neutra-escura);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+textarea {
+    width: 100%;
+    padding: var(--espacamento-s); /* 16px de padding interno */
+    border: 1px solid #BDBDBD; /* Borda Cinza sutil */
+    border-radius: var(--borda-arredondada);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Estado de Foco (Elegância/Interatividade) */
+input:focus,
+textarea:focus {
+    border-color: var(--cor-secundaria); /* Borda Ouro Suave no foco */
+    box-shadow: 0 0 0 2px rgba(255, 179, 0, 0.3); /* Brilho suave */
+    outline: none;
+}
+
+/* ------------------------------------- */
+/* 3. VALIDAÇÃO VISUAL (Requisito Obrigatório) */
+/* ------------------------------------- */
+
+/* Válido: Quando o campo atende ao required ou pattern (cor verde suave) */
+input:valid:not(:placeholder-shown) {
+    border-color: var(--cor-sucesso);
+    box-shadow: 0 0 0 1px var(--cor-sucesso);
+}
+
+/* Inválido: Quando o campo é obrigatório e está vazio OU não atende ao pattern (cor vermelha de erro) */
+input:invalid:not(:placeholder-shown) {
+    border-color: var(--cor-erro);
+    box-shadow: 0 0 0 1px var(--cor-erro);
+}
+
+/* Estilização específica para o botão dentro do formulário */
+form button[type="submit"] {
+    width: 100%;
+    margin-top: var(--espacamento-l); /* 32px de margem do conteúdo acima */
+    font-size: 1.1rem;
+    padding: var(--espacamento-s) 0;
+}

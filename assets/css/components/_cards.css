@@ -1,0 +1,65 @@
+/* ========================================= */
+/* COMPONENTES: CARDS RESPONSIVOS PARA PROJETOS */
+/* Requisito: Desenvolver sistema de cards responsivos para projetos */
+/* ========================================= */
+
+/* 1. Container Geral dos Cards (Usado em projetos.html) */
+/* Em Mobile, todos os cards ficam em uma coluna (Mobile-First) */
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacamento-l);
+    padding: var(--espacamento-s);
+}
+
+/* 2. Estilo Base do Card Individual (Elegância e Sombra) */
+.card {
+    background-color: var(--cor-fundo-card); 
+    border-radius: var(--borda-arredondada); 
+    box-shadow: var(--sombra-padrao); 
+    padding: var(--espacamento-s); 
+    display: flex;
+    flex-direction: column;
+}
+
+/* 3. Imagem do Card */
+.card-imagem {
+    width: 100%;
+    /* Altura fixa (ou mínima) para uniformizar o card */
+    min-height: 200px;
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorção */
+    border-radius: var(--borda-arredondada);
+    margin-bottom: var(--espacamento-s);
+}
+
+/* 4. Título do Card */
+.card h3 {
+    margin-top: var(--espacamento-zero);
+    margin-bottom: var(--espacamento-xs); /* 8px */
+    color: var(--cor-primaria);
+}
+
+/* 5. Ação do Card (Links) */
+.card a {
+    display: inline-block;
+    margin-top: var(--espacamento-s);
+    color: var(--cor-secundaria); 
+    font-weight: 700;
+}
+
+.card a:hover {
+    color: var(--cor-primaria); 
+}
+
+/* ------------------------------------------------ */
+/* RESPONSIVIDADE (Desktop/Tablet): MUDANÇA PARA LAYOUT EM GRADE */
+/* Requisito: Mobile-First + Layouts Responsivos */
+/* A lógica de 2 ou 3 colunas será definida no módulo _breakpoints.css. */
+/* ------------------------------------------------ */
+
+/* EXEMPLO DE ESTILO PARA QUANDO FOR APLICADO O GRID (NO BREAKPOINTS.CSS) */
+/* .cards-container {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+     gap: var(--espacamento-l);
+} */

@@ -1,0 +1,48 @@
+/* ========================================= */
+/* BASE: CSS RESET E NORMALIZAÇÃO */
+/* Garantia de que o CSS funciona igual em todos os navegadores */
+/* ========================================= */
+
+/* 1. Box-sizing global: Facilita o trabalho com tamanhos e padding/margin */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: var(--espacamento-zero);
+    padding: var(--espacamento-zero);
+}
+
+/* 2. Reset de lista: Remove marcadores em navs e outros */
+ul, ol {
+    list-style: none;
+    padding: var(--espacamento-zero);
+}
+
+/* 3. Reset de links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 4. Elementos de bloco e imagem */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%; /* Garante que imagens são responsivas */
+    height: auto;
+}
+
+/* 5. Estilos de acessibilidade/foco */
+:focus {
+    outline: 2px solid var(--cor-secundaria); /* Foco em Ouro Suave para acessibilidade */
+    outline-offset: 3px;
+}
+
+/* 6. Base para elementos de formulário */
+button, input, textarea, select {
+    font: inherit; /* Herda a fonte do corpo */
+}
+
+/* 7. Footer: Garante que o footer fique no fim do conteúdo se a tela for pequena */
+html, body {
+    min-height: 100%;
+}
