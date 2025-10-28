@@ -12,13 +12,18 @@
 </head>
 <body>
 
-    <header>
+<header>
         <div class="logo">
             <a href="index.html" aria-label="Voltar para a página inicial do Círculo das Artes">
                 <img src="imagens/logo-circulo-artes.png" alt="Logotipo Círculo das Artes" width="150">
             </a>
         </div>
-        <nav aria-label="Menu principal">
+        
+        <button class="menu-toggle js-menu-toggle" aria-expanded="false" aria-controls="main-nav">
+            <span class="menu-toggle-icon"></span>
+        </button>
+
+        <nav id="main-nav" class="js-menu" aria-label="Menu principal">
             <ul>
                 <li><a href="index.html">Início</a></li>
                 <li><a href="projetos.html" aria-current="page">Nossos Projetos</a></li>
@@ -33,22 +38,12 @@
         <h1>Conheça Nossos Projetos de Impacto Cultural</h1>
 
         <section id="projetos-em-acao">
-            <h2>Nossas Iniciativas em Ação (Galeria e Resultados)</h2>
+    <h2>Nossas Iniciativas em Ação (Galeria e Resultados)</h2>
 
-            <article class="projeto" role="region" aria-label="Detalhes do Projeto Orquestra Jovem">
-                <h3>Orquestra Jovem do Bairro <small>(Categoria: Música)</small></h3>
-                <p>Oferece aulas de instrumentos e teoria musical para crianças e adolescentes. Já impactou 300 jovens.</p>
-                <img src="imagens/orquestra-jovem.jpg" alt="Membros da Orquestra Jovem ensaiando" width="400" loading="lazy">
-                <p><strong>Impacto:</strong> 300 vidas transformadas. 12 apresentações públicas anuais.</p>
-                <a href="projeto-orquestra.html">Ver Galeria de Fotos e Vídeos</a>
-            </article>
+    <div class="cards-container">
+        </div>
 
-            <article class="projeto" role="region" aria-label="Detalhes do Projeto Oficinas de Teatro">
-                <h3>Oficinas de Teatro Comunitário <small>(Categoria: Teatro)</small></h3>
-                <p>O teatro como ferramenta de expressão e diálogo social, capacitando jovens para a produção de peças.</p>
-            </article>
-        </section>
-
+</section>
         <section id="voluntariado">
             <h2>Portal de Oportunidades: Seja um Voluntário</h2>
             <p>Precisamos de professores de arte, monitores e apoio logístico. Inscreva-se para a seleção!</p>

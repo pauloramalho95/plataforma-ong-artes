@@ -5,21 +5,26 @@
 
 /* 1. Ícone Hambúrguer (Mobile-First: Visível apenas em Mobile) */
 .menu-toggle {
-    display: none; /* Escondido por padrão (Será exibido em Mobile) */
+    /* Escondido por padrão, será exibido via @media query */
+    display: none; 
     background: none;
     border: none;
     cursor: pointer;
     padding: var(--espacamento-xs);
     z-index: 1001; /* Fica acima do menu */
+    /* Garante que o botão seja acessível via teclado */
+    color: transparent; 
 }
 
 /* Estilo do Ícone (usando um elemento SVG ou ícone simples) */
 .menu-toggle-icon {
     width: 30px;
     height: 3px;
-    background-color: var(--cor-neutra-clara);
+    background-color: var(--cor-neutra-clara); /* Off-White do header */
     position: relative;
     transition: background-color 0.3s, transform 0.3s;
+    /* Faz com que o ícone central suma na animação */
+    display: block; 
 }
 .menu-toggle-icon::before,
 .menu-toggle-icon::after {
@@ -28,7 +33,7 @@
     width: 100%;
     height: 3px;
     background-color: var(--cor-neutra-clara);
-    transition: transform 0.3s;
+    transition: transform 0.3s, top 0.3s;
 }
 .menu-toggle-icon::before {
     top: -8px;
@@ -37,48 +42,123 @@
     top: 8px;
 }
 
+/* Animação do Ícone (Hambúrguer -> X) */
+.js-menu-toggle.is-open .menu-toggle-icon {
+    background-color: transparent; /* A barra central some */
+}
+.js-menu-toggle.is-open .menu-toggle-icon::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+.js-menu-toggle.is-open .menu-toggle-icon::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+
 /* ------------------------------------- */
 /* 2. MENU DROPDOWN (Desktop-First) */
 /* ------------------------------------- */
 
 /* Container do item de lista que terá o submenu */
 .menu-item-dropdown {
-    position: relative;
+    position: relative; 
 }
 
 /* O Submenu (Oculto por Padrão) */
 .submenu {
     display: none;
     position: absolute;
-    top: 100%; /* Posiciona logo abaixo do item pai */
+    top: 100%; 
     left: 0;
     min-width: 200px;
-    background-color: var(--cor-fundo-card); 
+    background-color: var(--cor-fundo-card); /* Fundo branco limpo */
     box-shadow: var(--sombra-padrao);
     z-index: 999;
     padding: var(--espacamento-xs) 0;
     border-radius: var(--borda-arredondada);
 }
 
-/* Estilo dos links do submenu */
-.submenu a {
-    color: var(--cor-neutra-escura); 
-    padding: var(--espacamento-s) var(--espacamento-m);
-    display: block; /* Para ocupar toda a largura do submenu */
-    font-weight: 400;
-}
-.submenu a:hover {
-    background-color: #EEEEEE;
-    color: var(--cor-primaria);
-}
-
-/* Regra para MOSTRAR o Submenu no Desktop (Hover) */
+/* Regra para MOSTRAR o Submenu no Desktop (Hover/Focus) */
 .menu-item-dropdown:hover > .submenu,
 .menu-item-dropdown:focus-within > .submenu {
     display: block;
 }
 
+/* Estilo dos links do submenu */
+.submenu a {
+    color: var(--cor-neutra-escura); /* Texto escuro */
+    padding: var(--espacamento-s) var(--espacamento-m);
+    display: block; 
+    font-weight: 400;
+}
+.submenu a:hover {
+    background-color: #EEEEEE; /* Fundo cinza suave no hover */
+    color: var(--cor-primaria);
+}
+
+
 /* ------------------------------------- */
-/* 3. NAVEGAÇÃO MOBILE (Breakpoint no _breakpoints.css) */
-/* Esta lógica será ativada apenas em telas pequenas. */
+/* 3. ESTILIZAÇÃO MENU MOBILE (Fullscreen/Off-Canvas) */
+/* Ativado apenas em telas pequenas (< 768px) */
 /* ------------------------------------- */
+
+@media (max-width: 767px) {
+    /* Torna o botão hambúrguer visível */
+    .menu-toggle {
+        display: block; 
+    }
+    
+    /* Configuração do menu principal (js-menu) para o layout de tela cheia */
+    .js-menu {
+        display: none; /* Escondido por padrão, será visível via JS */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--cor-primaria); /* Fundo Azul Marinho */
+        z-index: 1000;
+        
+        /* Layout Flexbox para centralizar o conteúdo */
+        display: flex; /* Mantemos flexbox aqui para o layout interno */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* Adiciona transição para animação suave de abertura */
+        transform: translateX(100%);
+        transition: transform 0.4s ease-in-out;
+    }
+
+    /* Regra para mostrar o menu quando o JS adicionar a classe (Menu Aberto) */
+    .js-menu.is-open {
+        transform: translateX(0); /* Move o menu para dentro da tela */
+    }
+    
+    /* Estiliza a lista de links para o layout vertical */
+    .js-menu ul {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--espacamento-l); /* Espaçamento grande para touch */
+    }
+    
+    .js-menu ul li a {
+        font-size: var(--tamanho-h2); /* Links maiores para mobile */
+        padding: var(--espacamento-m) var(--espacamento-l);
+    }
+    
+    /* O submenu deve ser exibido em mobile, não oculto */
+    .submenu {
+        position: static; /* Sai da posição absoluta */
+        display: block;
+        background: rgba(255, 255, 255, 0.1); /* Fundo sutilmente diferente */
+        box-shadow: none;
+        padding: var(--espacamento-s);
+        margin-top: var(--espacamento-s);
+    }
+    
+    .submenu a {
+        color: var(--cor-neutra-clara); /* Links do submenu brancos */
+        font-size: var(--tamanho-body);
+    }
+}

@@ -18,7 +18,12 @@
                 <img src="imagens/logo-circulo-artes.png" alt="Logotipo Círculo das Artes" width="150">
             </a>
         </div>
-        <nav aria-label="Menu principal">
+        
+        <button class="menu-toggle js-menu-toggle" aria-expanded="false" aria-controls="main-nav">
+            <span class="menu-toggle-icon"></span>
+        </button>
+
+        <nav id="main-nav" class="js-menu" aria-label="Menu principal">
             <ul>
                 <li><a href="index.html">Início</a></li>
                 <li><a href="projetos.html">Nossos Projetos</a></li>
@@ -77,7 +82,7 @@
                 <input type="text" id="estado" name="estado" required aria-required="true">
             </fieldset>
 
-            <button type="submit">Finalizar Inscrição</button>
+            <button type="submit" class="btn btn-primario">Finalizar Inscrição</button>
         </form>
     </main>
 
@@ -85,6 +90,6 @@
         <p>&copy; 2025 Círculo das Artes. Junte-se à nossa missão.</p>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="assets/js/main.js" type="module" defer></script> 
 </body>
 </html>
