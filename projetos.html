@@ -18,6 +18,9 @@
                 <img src="imagens/logo-circulo-artes.png" alt="Logotipo Círculo das Artes" width="150">
             </a>
         </div>
+        <button id="theme-toggle" class="btn btn-icon" aria-label="Alternar para modo escuro ou claro">
+        🌙
+        </button>
         
         <button class="menu-toggle js-menu-toggle" aria-expanded="false" aria-controls="main-nav">
             <span class="menu-toggle-icon"></span>
@@ -34,21 +37,21 @@
         </nav>
     </header>
 
-    <main>
+    <main class="container">
         <h1>Conheça Nossos Projetos de Impacto Cultural</h1>
 
         <section id="projetos-em-acao">
-    <h2>Nossas Iniciativas em Ação (Galeria e Resultados)</h2>
+            <h2>Nossas Iniciativas em Ação (Galeria e Resultados)</h2>
 
-    <div class="cards-container">
-        </div>
+            <div class="cards-container">
+                </div>
 
-</section>
+        </section>
         <section id="voluntariado">
             <h2>Portal de Oportunidades: Seja um Voluntário</h2>
             <p>Precisamos de professores de arte, monitores e apoio logístico. Inscreva-se para a seleção!</p>
             <p><strong>Oportunidades:</strong> Música (violino, flauta), Artes Cênicas e Suporte Administrativo.</p>
-            <a href="cadastro.html" class="botao-principal">Candidatar-se ao Voluntariado</a>
+            <a href="cadastro.html" class="btn btn-primario">Candidatar-se ao Voluntariado</a>
             <aside>
                 <p>Voluntários ativos: <a href="area-voluntario.html">Acesse sua Área e Certificados Digitais</a></p>
             </aside>
@@ -58,7 +61,7 @@
             <h2>Apoie a Arte: Captação de Recursos</h2>
 
             <figure>
-                <img src="imagens/campanha-doacao.jpg" alt="Exemplo de material didático que será comprado com as doações" width="300">
+                <img src="imagens/campanha-doacao.jpg" alt="Exemplo de material didático que será comprado com as doações" width="300" loading="lazy">
                 <figcaption>Campanha atual: Equipar o Novo Laboratório de Artes Visuais.</figcaption>
             </figure>
 
@@ -67,7 +70,7 @@
                 <p>Progresso: 75% da meta atingida (R$ 7.500 de R$ 10.000)</p>
             </div>
 
-            <a href="doacao.html" class="botao-doacao" role="button">Realizar Doação On-line Agora!</a>
+            <a href="doacao.html" class="btn btn-primario" role="button">Realizar Doação On-line Agora!</a>
             <p><small>Veja nossa <a href="documentos/prestacao-contas.pdf" target="_blank">Prestação de Contas</a> detalhada.</small></p>
         </section>
     </main>
@@ -76,5 +79,6 @@
         <p>&copy; 2025 Círculo das Artes. Cultivando talentos.</p>
     </footer>
 
+    <script src="assets/js/main.js" type="module" defer></script>
 </body>
 </html>

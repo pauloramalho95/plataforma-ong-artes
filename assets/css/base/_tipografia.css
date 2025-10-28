@@ -4,18 +4,21 @@
 /* ========================================= */
 
 /* Estilos de Corpo de Texto */
+/* Essencial para que as cores do Modo Escuro (definidas em :root/.dark-mode) sejam aplicadas */
 body {
     font-family: var(--fonte-corpo);
     font-size: var(--tamanho-body);
     line-height: 1.6;
-    color: var(--cor-neutra-escura); /* Garante bom contraste com --cor-neutra-clara */
+    /* CRÍTICO: Usa variáveis de cor para que o Dark Mode funcione */
+    color: var(--cor-neutra-escura); 
     background-color: var(--cor-neutra-clara);
 }
 
 /* Estilos de Títulos (Hierarquia) */
 h1, h2, h3 {
     font-family: var(--fonte-titulo);
-    color: var(--cor-primaria); /* Títulos em Azul Marinho (Clássico/Elegante) */
+    /* CRÍTICO: Usa a variável que se torna Ouro Suave no Dark Mode */
+    color: var(--cor-primaria); 
     line-height: 1.2;
     margin-bottom: var(--espacamento-s);
     margin-top: var(--espacamento-m);
@@ -23,14 +26,11 @@ h1, h2, h3 {
 
 h1 {
     font-size: var(--tamanho-h1);
-    /* Margem extra para h1 */
     margin-top: var(--espacamento-l); 
 }
 
 h2 {
     font-size: var(--tamanho-h2);
-    /* Linha de separação visual discreta, se desejar */
-    /* border-bottom: 2px solid var(--cor-neutra-escura); */
     padding-bottom: var(--espacamento-xs);
 }
 
@@ -41,7 +41,9 @@ h3 {
 /* Estilos para textos menores (Rodapé, Metadados) */
 small, .meta-data {
     font-size: var(--tamanho-small);
-    color: #616161; 
+    /* NOTA: Usar uma cor fixa como #616161 aqui pode FALHAR o contraste no Dark Mode. 
+       É mais seguro usar a variável neutra escura. */
+    color: var(--cor-neutra-escura); 
 }
 
 /* Estilos de Links */
@@ -52,6 +54,6 @@ a {
 }
 
 a:hover, a:focus {
-    color: var(--cor-secundaria);
+    color: var(--cor-secundaria); /* Ouro Suave no hover */
     text-decoration: underline;
 }

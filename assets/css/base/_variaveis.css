@@ -4,17 +4,17 @@
 /* ========================================= */
 
 :root {
-    /* --- PALETA DE CORES (Requisito: Mínimo 8 Cores) --- */
-    --cor-primaria: #1A237E;
-    --cor-secundaria: #FFB300;
-    --cor-neutra-clara: #F5F5F5;
-    --cor-neutra-escura: #424242;
-    --cor-fundo-card: #FFFFFF;
-    --cor-sucesso: #4CAF50;
-    --cor-erro: #D32F2F;
-    --cor-link-hover: #7986CB;
+    /* --- PALETA DE CORES (Requisito: Mínimo 8 Cores - Modo Claro) --- */
+    --cor-primaria: #1A237E;       /* Azul Marinho Escuro */
+    --cor-secundaria: #FFB300;     /* Ouro Suave / Âmbar */
+    --cor-neutra-clara: #F5F5F5;   /* Off-White (Fundo Principal) */
+    --cor-neutra-escura: #424242;  /* Cinza Escuro (Texto Principal) */
+    --cor-fundo-card: #FFFFFF;     /* Branco Puro (Fundo de Cards) */
+    --cor-sucesso: #4CAF50;        /* Verde (Feedback positivo) */
+    --cor-erro: #D32F2F;           /* Vermelho (Feedback negativo) */
+    --cor-link-hover: #7986CB;     /* Azul Claro (Interação de links) */
     
-    /* --- TIPOGRAFIA (Requisito: Tipografia hierárquica) --- */
+    /* --- TIPOGRAFIA --- */
     --fonte-titulo: 'Playfair Display', serif;
     --fonte-corpo: 'Roboto', sans-serif;
 
@@ -25,16 +25,36 @@
     --tamanho-body: 1.0rem;
     --tamanho-small: 0.8rem;
     
-    /* --- ESPAÇAMENTO MODULAR (Requisito: Múltiplos de 8px) --- */
+    /* --- ESPAÇAMENTO MODULAR (Múltiplos de 8px) --- */
     --espacamento-zero: 0;
-    --espacamento-xs: 8px;    /* Extra Small */
-    --espacamento-s: 16px;    /* Small (Padrão) */
-    --espacamento-m: 24px;    /* Medium */
-    --espacamento-l: 32px;    /* Large */
-    --espacamento-xl: 48px;   /* Extra Large */
-    --espacamento-xxl: 64px;  /* Huge */
+    --espacamento-xs: 8px;    
+    --espacamento-s: 16px;    
+    --espacamento-m: 24px;    
+    --espacamento-l: 32px;    
+    --espacamento-xl: 48px;   
+    --espacamento-xxl: 64px;  
 
     /* --- OUTRAS VARIÁVEIS DE DESIGN SYSTEM --- */
     --sombra-padrao: 0 4px 8px rgba(0, 0, 0, 0.1);
     --borda-arredondada: 4px;
+}
+
+/* ========================================================== */
+/* VARIÁVEIS PARA MODO ESCURO (ALTO CONTRASTE WCAG) */
+
+html.dark-mode {
+    /* Cores principais invertidas (Alto Contraste) */
+    --cor-primaria: #FFB300;       /* Ouro (Cor de destaque e títulos) */
+    --cor-secundaria: #3949AB;     /* Azul Índigo (Acento secundário) */
+    
+    /* Fundo / Fundo de Cards Invertidos */
+    --cor-neutra-clara: #121212;   /* Fundo Principal: Preto Escuro */
+    --cor-fundo-card: #1E1E1E;     /* Fundo de Card: Cinza Escuro */
+    
+    /* Textos Invertidos */
+    --cor-neutra-escura: #F5F5F5;  /* Texto Principal: Branco Claro */
+    --cor-link-hover: #FFFFFF;     /* Links em branco no hover */
+
+    /* Efeitos de Sombra Invertidos */
+    --sombra-padrao: 0 4px 6px rgba(0, 0, 0, 0.4);
 }
