@@ -1,60 +1,52 @@
 /* ========================================= */
 /* BASE: VARIÁVEIS CSS CUSTOMIZADAS (:root) */
-/* Requisito: Desenvolver design system consistente com variáveis CSS */
 /* ========================================= */
 
 :root {
-    /* --- PALETA DE CORES (Requisito: Mínimo 8 Cores - Modo Claro) --- */
-    --cor-primaria: #1A237E;       /* Azul Marinho Escuro */
-    --cor-secundaria: #FFB300;     /* Ouro Suave / Âmbar */
-    --cor-neutra-clara: #F5F5F5;   /* Off-White (Fundo Principal) */
-    --cor-neutra-escura: #424242;  /* Cinza Escuro (Texto Principal) */
-    --cor-fundo-card: #FFFFFF;     /* Branco Puro (Fundo de Cards) */
-    --cor-sucesso: #4CAF50;        /* Verde (Feedback positivo) */
-    --cor-erro: #D32F2F;           /* Vermelho (Feedback negativo) */
-    --cor-link-hover: #7986CB;     /* Azul Claro (Interação de links) */
+    /* --- PALETA DE CORES (Modo Claro) --- */
+    --cor-primaria: #1A237E;
+    --cor-secundaria: #FFB300;
+    --cor-neutra-clara: #F5F5F5;   /* Fundo Principal Claro */
+    --cor-neutra-escura: #424242;  /* Texto Principal Escuro */
+    --cor-fundo-card: #FFFFFF;
+    --cor-sucesso: #4CAF50;
+    --cor-erro: #D32F2F;
+    --cor-link-hover: #7986CB;
     
-    /* --- TIPOGRAFIA --- */
+    /* --- TIPOGRAFIA, ESPAÇAMENTO, ETC. --- */
     --fonte-titulo: 'Playfair Display', serif;
     --fonte-corpo: 'Roboto', sans-serif;
-
-    /* Tamanhos Mobile-First (Base: 1rem = 16px) */
     --tamanho-h1: 2.0rem;
     --tamanho-h2: 1.5rem;
     --tamanho-h3: 1.2rem;
     --tamanho-body: 1.0rem;
     --tamanho-small: 0.8rem;
-    
-    /* --- ESPAÇAMENTO MODULAR (Múltiplos de 8px) --- */
     --espacamento-zero: 0;
-    --espacamento-xs: 8px;    
-    --espacamento-s: 16px;    
-    --espacamento-m: 24px;    
-    --espacamento-l: 32px;    
-    --espacamento-xl: 48px;   
-    --espacamento-xxl: 64px;  
-
-    /* --- OUTRAS VARIÁVEIS DE DESIGN SYSTEM --- */
+    --espacamento-xs: 8px;
+    --espacamento-s: 16px;
+    --espacamento-m: 24px;
+    --espacamento-l: 32px;
+    --espacamento-xl: 48px;
+    --espacamento-xxl: 64px;
     --sombra-padrao: 0 4px 8px rgba(0, 0, 0, 0.1);
     --borda-arredondada: 4px;
 }
 
 /* ========================================================== */
 /* VARIÁVEIS PARA MODO ESCURO (ALTO CONTRASTE WCAG) */
+/* CORREÇÃO CRÍTICA: Usa 'html.dark-mode' para a especificidade correta. */
+/* ========================================================== */
 
 html.dark-mode {
-    /* Cores principais invertidas (Alto Contraste) */
-    --cor-primaria: #FFB300;       /* Ouro (Cor de destaque e títulos) */
-    --cor-secundaria: #3949AB;     /* Azul Índigo (Acento secundário) */
-    
-    /* Fundo / Fundo de Cards Invertidos */
-    --cor-neutra-clara: #121212;   /* Fundo Principal: Preto Escuro */
+    /* Cores de Fundo Invertidas */
+    --cor-neutra-clara: #121212;   /* Fundo Principal: PRETO ESCURO */
     --cor-fundo-card: #1E1E1E;     /* Fundo de Card: Cinza Escuro */
     
-    /* Textos Invertidos */
+    /* Cores de Texto Invertidas */
     --cor-neutra-escura: #F5F5F5;  /* Texto Principal: Branco Claro */
-    --cor-link-hover: #FFFFFF;     /* Links em branco no hover */
+    --cor-primaria: #FFB300;       /* Ouro (Cor de destaque) */
+    --cor-secundaria: #3949AB;     /* Azul Índigo */
 
-    /* Efeitos de Sombra Invertidos */
+    /* Outras */
     --sombra-padrao: 0 4px 6px rgba(0, 0, 0, 0.4);
 }

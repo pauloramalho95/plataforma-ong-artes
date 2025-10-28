@@ -1,9 +1,3 @@
-/* ================================================= */
-/* MÓDULO: TEMPLATES.JS - ESTRUTURAS DE HTML REUTILIZÁVEIS */
-/* Requisito: Criar sistema de templates JavaScript */
-/* ================================================= */
-
-// Simula dados vindos de um banco de dados
 const projectData = [
     {
         id: 1,
@@ -30,15 +24,14 @@ const projectData = [
         status: "Pendente",
         description: "Campanha para equipar o novo laboratório para aulas de pintura e escultura.",
         impact: "Meta de R$ 10.000,00",
-        image: "imagens/jovem-pintando.jpg" 
+        image: "imagens/jovem-pintando.jpg"
     }
 ];
 
-// Função que gera a string HTML para um Card de Projeto
 export function createProjectCardTemplate(projeto) {
     const statusClass = projeto.status === 'Concluído' ? 'badge-sucesso' : 
                         projeto.status === 'Em Andamento' ? 'badge-neutro' : 
-                        'badge-secundario'; // Pendente/Campanha
+                        'badge-secundario';
 
     return `
         <article class="card">
@@ -55,7 +48,6 @@ export function createProjectCardTemplate(projeto) {
     `;
 }
 
-// Retorna todos os dados para o módulo SPA
 export function getAllProjects() {
     return projectData;
 }

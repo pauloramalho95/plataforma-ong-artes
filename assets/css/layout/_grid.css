@@ -1,6 +1,7 @@
 /* ========================================= */
 /* LAYOUT: GRID PRINCIPAL E SISTEMA DE 12 COLUNAS */
 /* Requisito: CSS Grid para estrutura e Grid 12 Colunas */
+/* CORREÇÃO CRÍTICA: Adicionado background-color para herdar a variável do Dark Mode */
 /* ========================================= */
 
 /* 1. Container: Garante que o conteúdo tenha uma largura máxima e centralização */
@@ -13,15 +14,16 @@
     /* Adiciona padding horizontal (respeitando o Espaçamento Modular) */
     padding-left: var(--espacamento-s); /* 16px */
     padding-right: var(--espacamento-s); /* 16px */
+
+    /* 💥 CORREÇÃO CRÍTICA: Garante que o container use a variável de fundo */
+    /* Se esta linha não existir, o container pode ser branco estático e bloquear o fundo do body */
+    background-color: var(--cor-neutra-clara); 
 }
 
 /* 2. Grid de 12 Colunas - Aplicado onde precisamos de flexibilidade */
-/* Ex: Dentro do .container, para estruturar cards ou formulários */
 .grid {
     display: grid;
-    /* Define o grid para ter 12 colunas de largura igual */
     grid-template-columns: repeat(12, 1fr);
-    /* Espaçamento entre as colunas (Gutter) */
     gap: var(--espacamento-m); /* 24px */
 }
 
@@ -43,24 +45,22 @@
 /* 4. Layout Principal (Body) com CSS Grid */
 .layout-principal {
     display: grid;
-    /* Define as linhas: Cabeçalho fixo, Conteúdo que cresce, Rodapé fixo */
     grid-template-rows: auto 1fr auto; 
-    /* Garante que o grid ocupe toda a altura da viewport */
     min-height: 100vh;
 }
 
-/* 5. Estilização das Áreas Principais */
+/* 5. Estilização das Áreas Principais (Mapeamento para o Grid) */
 header {
-    /* Mapeamento para o grid principal */
     grid-row: 1; 
 }
 
 main {
-    /* Mapeamento para o grid principal */
     grid-row: 2; 
+    /* 💥 CORREÇÃO SECUNDÁRIA: Garante que o MAIN use a variável de fundo, se não estiver usando .container */
+    /* Se o seu main tiver a classe container, esta linha não é estritamente necessária aqui. */
+    background-color: var(--cor-neutra-clara); 
 }
 
 footer {
-    /* Mapeamento para o grid principal */
     grid-row: 3;
 }

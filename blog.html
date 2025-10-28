@@ -1,92 +1,78 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Acompanhe as últimas notícias, eventos e atualizações do Círculo das Artes. Fique por dentro de tudo que fazemos!">
-    <meta name="keywords" content="Notícias, Blog, Círculo das Artes, Eventos Culturais, Atualizações ONG">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>Blog e Notícias | Círculo das Artes</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Acompanhe as últimas notícias, eventos e atualizações do Círculo das Artes. Fique por dentro de tudo que fazemos!">
+<meta name="keywords" content="Notícias, Blog, Círculo das Artes, Eventos Culturais, Atualizações ONG">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.min.css">
+<title>Blog e Notícias | Círculo das Artes</title>
 </head>
 <body>
-
-    <header>
-        <div class="logo">
-            <a href="index.html" aria-label="Voltar para a página inicial do Círculo das Artes">
-                <img src="imagens/logo-circulo-artes.png" alt="Logotipo Círculo das Artes" width="150">
-            </a>
-        </div>
-        <button id="theme-toggle" class="btn btn-icon" aria-label="Alternar para modo escuro ou claro">
-        🌙
-        </button>
-        
-        <button class="menu-toggle js-menu-toggle" aria-expanded="false" aria-controls="main-nav">
-            <span class="menu-toggle-icon"></span>
-        </button>
-
-        <nav id="main-nav" class="js-menu" aria-label="Menu principal">
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="projetos.html">Nossos Projetos</a></li>
-                <li><a href="cadastro.html">Cadastre-se / Voluntariado</a></li>
-                <li><a href="index.html#contato">Contato</a></li>
-                <li><a href="blog.html" aria-current="page">Blog e Notícias</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <h1>Notícias e Atualizações do Círculo das Artes</h1>
-
-        <section id="lista-posts">
-            <h2>Últimas Publicações</h2>
-            
-            <article class="post" aria-labelledby="titulo-post-1">
-                <img src="imagens/noticia-apresentacao.jpg" alt="Foto de uma apresentação da orquestra jovem da ONG" width="500" loading="lazy">
-                
-                <h3 id="titulo-post-1">Sucesso na Apresentação da orquestra jovem</h3>
-                <p class="meta-data">Publicado em: <time datetime="2025-10-09">09 de Outubro de 2025</time> por Equipe de Comunicação</p>
-                <p>Nossos alunos brilharam com o espetáculo Musical da orquestra jovem. O evento arrecadou fundos para a compra de novos instrumentos...</p>
-                <a href="post-1.html" aria-label="Leia mais sobre o Sucesso na Apresentação Anual da orquestra jovem">Leia Mais</a>
-            </article>
-            
-            <article class="post" aria-labelledby="titulo-post-2">
-                <img src="imagens/noticia-oficina-nova.jpg" alt="Foto de crianças participando de uma oficina de artes" width="500" loading="lazy">
-                
-                <h3 id="titulo-post-2">Inscrições Abertas para a Oficina de Pintura em tela</h3>
-                <p class="meta-data">Publicado em: <time datetime="2025-09-20">20 de Setembro de 2025</time> por Gestão de Projetos</p>
-                <p>Uma nova oportunidade para a comunidade aprender Pintura em tela. As vagas são limitadas...</p>
-                <a href="post-2.html" aria-label="Leia mais sobre as Inscrições Abertas para a Oficina de Pintura em tela">Leia Mais</a>
-            </article>
-        </section>
-
-        <aside id="imprensa-newsletter">
-            <h2>Mantenha-se Informado</h2>
-            
-            <section class="newsletter">
-                <h3>Assine Nossa Newsletter</h3>
-                <form action="/inscrever-newsletter" method="POST">
-                    <label for="newsletter-email">Seu melhor e-mail:</label>
-                    <input type="email" id="newsletter-email" name="email" required>
-                    <button type="submit" class="btn btn-primario">Inscrever</button>
-                </form>
-            </section>
-            
-            <section class="imprensa">
-                <h3>Área de Imprensa</h3>
-                <p>Acesse releases, fotos em alta resolução e kits de mídia para jornalistas.</p>
-                <a href="documentos/kit-imprensa.zip" target="_blank" aria-label="Acessar o Kit de Imprensa (arquivo zip)" class="btn btn-secundario">Acessar Kit de Mídia</a>
-            </section>
-        </aside>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Círculo das Artes. Conteúdo e Comunicação.</p>
-    </footer>
-
-    <script src="assets/js/main.js" type="module" defer></script>
+<header>
+<div class="logo">
+<a href="index.html" aria-label="Voltar para a página inicial do Círculo das Artes">
+<img src="imagens/logo-circulo-artes.png" alt="Logotipo Círculo das Artes" width="150">
+</a>
+</div>
+<button id="theme-toggle" class="btn btn-icon" aria-label="Alternar para modo escuro ou claro">
+🌙
+</button>
+<button class="menu-toggle js-menu-toggle" aria-expanded="false" aria-controls="main-nav">
+<span class="menu-toggle-icon"></span>
+</button>
+<nav id="main-nav" class="js-menu" aria-label="Menu principal">
+<ul>
+<li><a href="index.html">Início</a></li>
+<li><a href="projetos.html">Nossos Projetos</a></li>
+<li><a href="cadastro.html">Cadastre-se / Voluntariado</a></li>
+<li><a href="index.html#contato">Contato</a></li>
+<li><a href="blog.html" aria-current="page">Blog e Notícias</a></li>
+</ul>
+</nav>
+</header>
+<main class="container">
+<h1>Notícias e Atualizações do Círculo das Artes</h1>
+<section id="lista-posts">
+<h2>Últimas Publicações</h2>
+<article class="post" aria-labelledby="titulo-post-1">
+<img src="imagens/noticia-apresentacao.jpg" alt="Foto de uma apresentação da orquestra jovem da ONG" width="500" loading="lazy">
+<h3 id="titulo-post-1">Sucesso na Apresentação da orquestra jovem</h3>
+<p class="meta-data">Publicado em: <time datetime="2025-10-09">09 de Outubro de 2025</time> por Equipe de Comunicação</p>
+<p>Nossos alunos brilharam com o espetáculo Musical da orquestra jovem. O evento arrecadou fundos para a compra de novos instrumentos...</p>
+<a href="post-1.html" aria-label="Leia mais sobre o Sucesso na Apresentação Anual da orquestra jovem">Leia Mais</a>
+</article>
+<article class="post" aria-labelledby="titulo-post-2">
+<img src="imagens/noticia-oficina-nova.jpg" alt="Foto de crianças participando de uma oficina de artes" width="500" loading="lazy">
+<h3 id="titulo-post-2">Inscrições Abertas para a Oficina de Pintura em tela</h3>
+<p class="meta-data">Publicado em: <time datetime="2025-09-20">20 de Setembro de 2025</time> por Gestão de Projetos</p>
+<p>Uma nova oportunidade para a comunidade aprender Pintura em tela. As vagas são limitadas...</p>
+<a href="post-2.html" aria-label="Leia mais sobre as Inscrições Abertas para a Oficina de Pintura em tela">Leia Mais</a>
+</article>
+</section>
+<aside id="imprensa-newsletter">
+<h2>Mantenha-se Informado</h2>
+<section class="newsletter">
+<h3>Assine Nossa Newsletter</h3>
+<form action="/inscrever-newsletter" method="POST">
+<label for="newsletter-email">Seu melhor e-mail:</label>
+<input type="email" id="newsletter-email" name="email" required>
+<button type="submit" class="btn btn-primario">Inscrever</button>
+</form>
+</section>
+<section class="imprensa">
+<h3>Área de Imprensa</h3>
+<p>Acesse releases, fotos em alta resolução e kits de mídia para jornalistas.</p>
+<a href="documentos/kit-imprensa.zip" target="_blank" aria-label="Acessar o Kit de Imprensa (arquivo zip)" class="btn btn-secundario">Acessar Kit de Mídia</a>
+</section>
+</aside>
+</main>
+<footer>
+<p>&copy; 2025 Círculo das Artes. Conteúdo e Comunicação.</p>
+</footer>
+<script src="assets/js/main.js" type="module" defer></script>
 </body>
 </html>
